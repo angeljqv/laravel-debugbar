@@ -33,7 +33,7 @@ class LaravelCollector extends DataCollector implements Renderable
     public function gatherData()
     {
         return [
-            'Laravel Version' => $this->laravel->version(),
+            'Laravel Version' => $this->laravel->version() . '.x',
             'PHP Version' => phpversion(),
             'Environment' => $this->laravel->environment(),
             'Debug Mode' => config('app.debug') ? 'Enabled' : 'Disabled',
